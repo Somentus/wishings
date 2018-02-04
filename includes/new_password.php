@@ -62,5 +62,3 @@ function newPassword($pdo) {
 
 	return $errors;
 }
-
-?>

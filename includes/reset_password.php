@@ -79,5 +79,3 @@ function resetPassword($pdo) {
 
 	return $errors;
 }
-
-?>

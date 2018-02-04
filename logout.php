@@ -11,5 +11,3 @@ if(isset($_GET['url']) && !empty($_GET['url'])) {
 	header('Location: /');
 }
 exit;
-
-?>

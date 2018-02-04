@@ -14,5 +14,3 @@ if(isset($_GET['uuid']) && !empty($_GET['uuid']) && isset($_GET['user_id']) && !
 		header('Location: /');
 	}
 }
-
-?>
