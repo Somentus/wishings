@@ -110,18 +110,12 @@ function navbar($pdo) {
     	// Visitor is an admin
         echo '
             <li class="nav-item">
-                <a class="nav-link" href="/settings.php">Settings</a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link" href="/logout.php?url='.$_SERVER['REQUEST_URI'].'">Log Out</a>
             </li>
         ';
     } else if(isLoggedIn()) {
     	// Visitor is normal user
        	echo '
-            <li class="nav-item">
-                <a class="nav-link" href="/settings.php">Settings</a>
-            </li>
             <li class="nav-item">
                 <a class="nav-link" href="/logout.php?url='.$_SERVER['REQUEST_URI'].'">Log Out</a>
             </li>
