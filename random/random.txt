@@ -1,0 +1,24 @@
+Set up sendmail on XAMPP:
+https://stackoverflow.com/questions/15965376/how-to-configure-xampp-to-send-mail-from-localhost
+
+UUID / Store images:
+https://rogerstringer.com/2013/11/14/generate-uuids-php/
+https://secure.php.net/manual/en/function.getcwd.php
+https://secure.php.net/manual/en/function.is-dir.php
+
+https://heeftmijnwebsitehttpsnodig.nl/
+https://stackoverflow.com/questions/4788644/select-latest-record-in-table-datetime-field
+https://signalvnoise.com/posts/3124-give-it-five-minutes
+https://phpdelusions.net/pdo
+https://www.yourwebskills.com/dbphpmyadminrelationships.php
+https://try.discourse.org/
+https://blog.codinghorror.com/the-god-login/
+https://blog.codinghorror.com/
+https://blog.codinghorror.com/trees-treeviews-and-ui/
+https://discuss.flarum.org/
+http://www.conquerclub.com/forum/index.php
+https://stackoverflow.com/questions/1545357/how-to-check-if-a-user-is-logged-in-in-php
+https://secure.php.net/manual/en/function.password-verify.php
+https://secure.php.net/manual/en/faq.passwords.php
+http://shoelace.io/
+https://andwecode.com/create-popup-login-and-signup-form/#live

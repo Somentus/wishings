@@ -1,0 +1,61 @@
+a LIST has:
+- id (primary key, auto_increment)
+- owner_id (fk => USER(id))
+- name
+- body
+- created_at (timestamp)
+- updated_at (timestamp)
+
+an ITEM has:
+- id (primary key, auto_increment)
+- list_id (fk => LIST(id))
+- patron_id (fk => USER(id))
+- name
+- body
+- created_at (timestamp)
+- updated_at (timestamp)
+
+a USER has:
+- id (primary key, auto_increment)
+- username
+- email
+- password
+- is_admin (boolean)
+- is_active (boolean)
+- created_at (timestamp)
+- updated_at (timestamp)
+
+an ACTIVATION_KEY has:
+- id (primary key, auto_increment)
+- user_id (fk => USER(id))
+- uuid (VARCHAR(36))
+- created_at (timestamp)
+- updated_at (timestamp)
+
+a RESET_PASSWORD has:
+- id (primary key, auto_increment)
+- user_id (fk => USER(id))
+- uuid (VARCHAR(36))
+- created_at (timestamp)
+- updated_at (timestamp)
+
+FOR LATER:
+
+a THREAD has:
+- id (primary key, auto_increment)
+- sender (fk => USER(id))
+- receiver (fk => USER(id))
+- list_id (fk => LIST(id))
+- item_id (fk => LIST(id))
+- title
+- created_at (timestamp)
+- updated_at (timestamp)
+
+a MESSAGE has:
+- id (primary key, auto_increment)
+- thread_id (fk => THREAD(id))
+- sender (fk => USER(id))
+- receiver (fk => USER(id))
+- body
+- created_at (timestamp)
+- updated_at (timestamp)

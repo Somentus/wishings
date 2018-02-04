@@ -1,0 +1,27 @@
+IN PROGRESS
+
+SMALL:
+- Write function to send emails
+- More information in emails (who is the user, what is the email about, what website is the email from)
+
+MEDIUM:
+- Make errors prettier
+- Add user page (public profile)
+- Form validation (https://getbootstrap.com/docs/4.0/components/forms/#server-side)
+- Rework location display in navbar
+- After X attempts at logging in, wait Y seconds before you can retry logging in to prevent spamming
+
+BIG:
+- Redo portal (https://andwecode.com/create-popup-login-and-signup-form/#live)
+- Routes (clean URL)
+
+IDEA:
+- Guest accounts (don't need to log in to visit list and claim item/system automatically creates an account for current session, user can enter email later)
+- Night mode (https://bootswatch.com/darkly/)
+- Hover over time since to show exact date/time
+- Invite users for lists
+- Take a look at session_regenerate_id (https://secure.php.net/manual/en/function.session-regenerate-id.php)
+- Add/enable HTTPS (research how it works first xD )
+- In user settings, toggle between "Last post in forum" and "Last unread post in forum" or maybe even "Last unread post in tracked topics" (maybe even toggle per category and/or per forum)
+
+DONE:
