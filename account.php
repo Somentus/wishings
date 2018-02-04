@@ -7,11 +7,8 @@ $pdo = DB();
 require_once($_SERVER["DOCUMENT_ROOT"].'/includes/codes.php');
 require_once($_SERVER["DOCUMENT_ROOT"].'/includes/account.php');
 
-$errors = [];
-if(isset($_POST['login'])) {
-	$errors = login($pdo);
-} else if (isset($_POST['register'])) {
-	$errors = register($pdo);
+if(!isLoggedIn()) {
+	header('Location: /');
 }
 
 ?>

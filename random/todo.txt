@@ -1,8 +1,11 @@
-IN PROGRESS
+IN PROGRESS:
+- includes/account.php: Display all lists owned by user
+- includes/account.php: Display all lists/items that user contributes to
 
 SMALL:
 - Write function to send emails
 - More information in emails (who is the user, what is the email about, what website is the email from)
+- includes/account.php: Click here to create a new wishlist!
 
 MEDIUM:
 - Make errors prettier
@@ -14,6 +17,7 @@ MEDIUM:
 BIG:
 - Redo portal (https://andwecode.com/create-popup-login-and-signup-form/#live)
 - Routes (clean URL)
+- Create list from homepage without having to log in/register, enter email address later to register account
 
 IDEA:
 - Guest accounts (don't need to log in to visit list and claim item/system automatically creates an account for current session, user can enter email later)
