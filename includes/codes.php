@@ -205,7 +205,7 @@ function login($pdo) {
 	        		$_SESSION['is_admin'] = true;
 		            header('location:admin/categories.php');
 	        	} else {        		
-		            header('location:index.php');
+		            header('location:account.php');
 	        	}
 		        exit();
 
