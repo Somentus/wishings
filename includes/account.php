@@ -9,6 +9,7 @@ function body($pdo) {
 // Display all lists owned by user
 function echoListsOwnedBy($pdo, $user_id) {
 	$ownedLists = query($pdo, "SELECT * FROM lists WHERE owner_id = :owner_id", ['owner_id' => $user_id]);
+	echo "<h5>Lists that you own:</h5>";
 
 	if(count($ownedLists) > 0) {
 		foreach($ownedLists as $list) {
@@ -37,6 +38,8 @@ function echoListsOwnedBy($pdo, $user_id) {
 function echoListsContributedBy($pdo, $user_id) {
 	$contributedItems = query($pdo, "SELECT * FROM items WHERE patron_id = :patron_id", ['patron_id' => $user_id]);
 	$contributedListsRaw = [];
+
+	echo "<h5>Lists that you contribute to:</h5>";
 
 	if(count($contributedItems) > 0) {
 		foreach($contributedItems as $contributedItem) {
