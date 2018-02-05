@@ -37,8 +37,14 @@ function location($pdo) {
             $urls = ['index.php', 'forum.php?id='.$forum_id, 'topic.php?id='.$topic_id];
             break;
         default:
-            $currentFileCapitalised = ucfirst($currentFile);
-            $objectNames = [$currentFileCapitalised];
+			$namesUncapitalised = explode('_', $currentFile);
+			$names = [];
+			foreach($namesUncapitalised as $word) {
+				$names[] = ucfirst($word);
+			}
+
+			$name = implode(' ', $names);
+            $objectNames = [$name];
             $urls = [$location];
             break;
     }
