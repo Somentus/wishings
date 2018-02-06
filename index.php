@@ -13,6 +13,10 @@ if(isset($_POST['login'])) {
 	$errors = register($pdo);
 }
 
+if(isLoggedIn()) {
+	header('Location: /account.php');
+}
+
 ?>
 
 <!DOCTYPE HTML>
