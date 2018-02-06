@@ -60,7 +60,7 @@ if(!isLoggedIn()) {
 				</div>
 
 				<div class="col-md-4">
-					<input type="text" name="item1_name" class="form-control" id="item1_name" placeholder="Item Name">
+					<input type="text" name="item[1][name]" class="form-control" id="item1_name" placeholder="Item Name">
 				</div>
 
 				<div class="col-md-2">
@@ -68,7 +68,7 @@ if(!isLoggedIn()) {
 				</div>
 
 				<div class="col-md-4">
-					<textarea name="item1_description" class="form-control" id="item1_description" rows="3"></textarea>
+					<textarea name="item[1][description]" class="form-control" id="item1_description" rows="3"></textarea>
 				</div>
 			</div>
 

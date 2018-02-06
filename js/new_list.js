@@ -31,7 +31,7 @@ function getNewItemHtml(itemNumber) {
 	</div>\
 \
 	<div class="col-md-4">\
-		<input type="text" name="item' + itemNumber + '_name" class="form-control" id="item' + itemNumber + '_name" placeholder="Item Name">\
+		<input type="text" name="item[' + itemNumber + '][name]" class="form-control" id="item' + itemNumber + '_name" placeholder="Item Name">\
 	</div>\
 \
 	<div class="col-md-2">\
@@ -39,7 +39,7 @@ function getNewItemHtml(itemNumber) {
 	</div>\
 \
 	<div class="col-md-4">\
-		<textarea name="item' + itemNumber + '_description" class="form-control" id="item' + itemNumber + '_description" rows="3"></textarea>\
+		<textarea name="item[' + itemNumber + '][description]" class="form-control" id="item' + itemNumber + '_description" rows="3"></textarea>\
 	</div>';
 
 	return html;
