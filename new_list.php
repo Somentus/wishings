@@ -83,7 +83,7 @@ if(!isLoggedIn()) {
 			<hr/>
 
 			<div class="text-center" id="submitButton">
-				<button type="submit" name="create_topic" class="btn btn-outline-primary">Submit</button>
+				<button type="submit" name="create_list" class="btn btn-outline-primary">Submit</button>
 			</div>
 		</form>
 		<br/>
