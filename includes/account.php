@@ -9,11 +9,22 @@ function body($pdo) {
 // Display all lists owned by user
 function echoListsOwnedBy($pdo, $user_id) {
 	$ownedLists = query($pdo, "SELECT * FROM lists WHERE owner_id = :owner_id", ['owner_id' => $user_id]);
-	echo "<h5>Lists that you own:</h5>";
+	echo "
+		<div class='row mb-1'>
+			<div class='col-md-6'>
+				<h5>Lists that you own:</h5>
+			</div>
+			<div class='col-md-6'>
+				<a href='/new_list.php' class='btn btn-outline-secondary btn-sm float-right'>New Wishlist</a>
+			</div>
+
+		</div>
+	";
 
 	if(count($ownedLists) > 0) {
 		foreach($ownedLists as $list) {
-			echo "<div class='col-md-12 border border-secondary'>
+			echo "
+				<div class='col-md-12 border border-secondary'>
 					<div class='row border border-secondary'>
 						<p class='font-weight-bold'>".$list['name']."</p>
 					</div>";

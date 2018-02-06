@@ -1,16 +1,19 @@
 IN PROGRESS:
+- new_list.php: Add functionality for users to create new wishlists
 
 SMALL:
 - includes/codes.php: Write function to send emails
-- generals: More information in emails (who is the user, what is the email about, what website is the email from)
+- new: More information in emails (who is the user, what is the email about, what website is the email from)
 - includes/account.php: Click here to create a new wishlist!
 
 MEDIUM:
+- Rework page titles
 - Make errors prettier
 - Add user page (public profile)
 - Form validation (https://getbootstrap.com/docs/4.0/components/forms/#server-side)
 - Rework location display in navbar
 - After X attempts at logging in, wait Y seconds before you can retry logging in to prevent spamming
+- Restrict access to certain pages (for example, all /includes/ pages)
 
 BIG:
 - Redo portal (https://andwecode.com/create-popup-login-and-signup-form/#live)
@@ -27,6 +30,8 @@ IDEA:
 - In user settings, toggle between "Last post in forum" and "Last unread post in forum" or maybe even "Last unread post in tracked topics" (maybe even toggle per category and/or per forum)
 
 DONE:
+- includes/codes: Rework location to display URLs word for word. Example: new_list.php is displayed as New_list, rather than New List
+- includes/account.php: Add button to create new wishlists
 - includes/account.php: Add headers to describe what info is being displayed.
 - includes/account.php: Display all lists owned by user
 - includes/account.php: Display all lists/items that user contributes to
