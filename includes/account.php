@@ -34,7 +34,7 @@ function echoListsOwnedBy($pdo, $user_id) {
 					echo $item['name'];
 				echo "</div>";
 			}
-			echo "</div>";
+			echo "</div><br/>";
 		}
 
 	} else {
