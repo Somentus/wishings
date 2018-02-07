@@ -44,10 +44,12 @@ function body($pdo) {
 							</h6>
 						</div>
 						<div class='col-md-2'>";
-				if($item['patron_id'] == NULL) {
-					echo "Item is not taken yet.";
-				} else {
-					echo "Item is taken.";
+				if($_SESSION['id'] != $list['owner_id']) {
+					if($item['patron_id'] == NULL) {
+						echo "Item is not taken yet.";
+					} else {
+						echo "Item is taken.";
+					}
 				}
 				echo "
 						</div>
