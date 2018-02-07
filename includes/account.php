@@ -62,15 +62,27 @@ function echoListsContributedBy($pdo, $user_id) {
 		$contributedLists = array_unique($contributedListsRaw);
 
 		foreach($contributedLists as $list) {
-			echo "<div class='col-md-12 border border-secondary'>
-					<div class='row border border-secondary'>
-						<a href='list.php?id=".$list['id']."'>".$list['name']."</a>
+			echo "<div class='col-md-12'>
+					<div class='row'>
+						<div clas='col-md-12'>
+							<h6><span class='oi oi-list'><a class='ml-1' href='list.php?id=".$list['id']."'>".$list['name']."</a></h6>
+						</div>
 					</div>";
 			$items = query($pdo, "SELECT * FROM items WHERE list_id = :list_id", ['list_id' => $list['id']]);
 			foreach($items as $item) {
-				echo "<div class='row border border-secondary'>";
-					echo $item['name'];
-				echo "</div>";
+				echo "
+					<div class='row'>
+						<div clas='col-md-12'>";
+				if($user_id == $item['patron_id']) {
+					echo "<span class='oi oi-person mr-1'></span>";
+				} else if($item['patron_id'] != NULL) {
+					echo "<span class='oi oi-check mr-1'></span>";
+				} else {
+					echo "<span class='oi oi-x mr-1'></span>";
+				}
+				echo $item['name'];
+				echo "</div>
+				</div>";
 			}
 			echo "</div>";
 		}
