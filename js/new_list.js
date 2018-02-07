@@ -47,7 +47,7 @@ function getNewItemHtml(itemNumber) {
 
 function getNewItemButton(itemNumber) {
 	var html = '<div class="col-md-12">\
-					<button type="button" name="add_item" class="btn btn-outline-secondary" onclick="addItem(' + itemNumber + ');">+ Add Item to Wishlist</button>\
+					<button type="button" name="add_item" class="btn btn-outline-secondary" onclick="addItem(' + itemNumber + ');">+ Add Another Item to Wishlist</button>\
 				</div>';
 	return html;
 }
