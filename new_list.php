@@ -5,7 +5,6 @@ session_start();
 require_once($_SERVER["DOCUMENT_ROOT"].'/includes/DB.php');
 $pdo = DB();
 require_once($_SERVER["DOCUMENT_ROOT"].'/includes/codes.php');
-require_once($_SERVER["DOCUMENT_ROOT"].'/includes/new_list.php');
 
 if(!isLoggedIn()) {
 	header('Location: /');
