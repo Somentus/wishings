@@ -1,5 +1,4 @@
 IN PROGRESS:
-- new_list.php: Add functionality for users to create new wishlists
 
 SMALL:
 - includes/codes.php: Write function to send emails
@@ -7,6 +6,7 @@ SMALL:
 - includes/account.php: Click here to create a new wishlist!
 
 MEDIUM:
+- Add default and custom config files for DB.php to use
 - Rework page titles
 - Make errors prettier
 - Add user page (public profile)
@@ -30,6 +30,7 @@ IDEA:
 - In user settings, toggle between "Last post in forum" and "Last unread post in forum" or maybe even "Last unread post in tracked topics" (maybe even toggle per category and/or per forum)
 
 DONE:
+- new_list.php: Add functionality for users to create new wishlists
 - includes/codes: Rework location to display URLs word for word. Example: new_list.php is displayed as New_list, rather than New List
 - includes/account.php: Add button to create new wishlists
 - includes/account.php: Add headers to describe what info is being displayed.
