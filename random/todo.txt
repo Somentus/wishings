@@ -1,6 +1,7 @@
 IN PROGRESS:
 
 SMALL:
+- includes/codes.php: Add admin navbar buttons
 - includes/codes.php: Write function to send emails
 - new: More information in emails (who is the user, what is the email about, what website is the email from)
 - includes/account.php: Click here to create a new wishlist!
@@ -27,7 +28,6 @@ IDEA:
 - Invite users for lists
 - Take a look at session_regenerate_id (https://secure.php.net/manual/en/function.session-regenerate-id.php)
 - Add/enable HTTPS (research how it works first xD )
-- In user settings, toggle between "Last post in forum" and "Last unread post in forum" or maybe even "Last unread post in tracked topics" (maybe even toggle per category and/or per forum)
 
 DONE:
 - account.php: Add links to displayed lists

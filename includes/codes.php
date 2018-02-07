@@ -11,31 +11,6 @@ function location($pdo) {
     $currentFile = explode('.', $location)[0];
 
     switch($currentFile) {
-        case 'forum':
-            $forum_id = $id;
-            $forum = query($pdo, "SELECT * FROM forums WHERE id = :id", ['id' => $forum_id])[0];
-            $forum_name = $forum['name'];
-            $category_id = $forum['category_id'];
-            $category = query($pdo, "SELECT * FROM categories WHERE id = :id", ['id' => $category_id])[0];
-            $category_name = $category['name'];
-
-            $objectNames = [$category_name, $forum_name];
-            $urls = ['index.php', 'forum.php?id='.$forum_id];           
-            break;
-        case 'topic':
-            $topic_id = $id;
-            $topic = query($pdo, "SELECT * FROM topics WHERE id = :id", ['id' => $topic_id])[0];
-            $topic_title = $topic['title'];
-            $forum_id = $topic['forum_id'];
-            $forum = query($pdo, "SELECT * FROM forums WHERE id = :id", ['id' => $forum_id])[0];
-            $forum_name = $forum['name'];
-            $category_id = $forum['category_id'];
-            $category = query($pdo, "SELECT * FROM categories WHERE id = :id", ['id' => $category_id])[0];
-            $category_name = $category['name'];
-
-            $objectNames = [$category_name, $forum_name, $topic_title];
-            $urls = ['index.php', 'forum.php?id='.$forum_id, 'topic.php?id='.$topic_id];
-            break;
         default:
 			$namesUncapitalised = explode('_', $currentFile);
 			$names = [];
@@ -71,26 +46,7 @@ function navbar($pdo) {
 
             ';
     if(isLoggedIn(true)) {
-    	echo '
-    		<span class="navbar-text">|</span>
-    		<li class="nav-item';
-			if($currentLocation[0] == "Categories") {
-				echo ' active';
-			}
-    		echo '" >
-    			<a class="nav-link" href="/admin/categories.php">Categories</a>
-			</li>
-			<span class="navbar-text">|</span>
-			<li class="nav-item';
-
-			if($currentLocation[0] == "Forums") {
-				echo ' active';
-			}
-
-			echo '" >
-				<a class="nav-link" href="/admin/forums.php">Forums</a>
-			</li>
-		';
+    	// TODO: Add admin navbar buttons
     } else {
 	    for($i = 0; $i < $locationSteps; $i++) {
 	        echo '
