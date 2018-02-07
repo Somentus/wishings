@@ -30,11 +30,12 @@ IDEA:
 - In user settings, toggle between "Last post in forum" and "Last unread post in forum" or maybe even "Last unread post in tracked topics" (maybe even toggle per category and/or per forum)
 
 DONE:
+- account.php: Add links to displayed lists
 - Add Iconic library to the site
 - list.php: Display a list and its items
 - new_list.php: Add functionality for users to create new wishlists
 - includes/codes: Rework location to display URLs word for word. Example: new_list.php is displayed as New_list, rather than New List
 - includes/account.php: Add button to create new wishlists
-- includes/account.php: Add headers to describe what info is being displayed.
+- includes/account.php: Add headers to describe what info is being displayed
 - includes/account.php: Display all lists owned by user
 - includes/account.php: Display all lists/items that user contributes to

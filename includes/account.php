@@ -26,7 +26,7 @@ function echoListsOwnedBy($pdo, $user_id) {
 			echo "
 				<div class='col-md-12 border border-secondary'>
 					<div class='row border border-secondary'>
-						<p class='font-weight-bold'>".$list['name']."</p>
+						<a href='list.php?id=".$list['id']."'>".$list['name']."</a>
 					</div>";
 			$items = query($pdo, "SELECT * FROM items WHERE list_id = :list_id", ['list_id' => $list['id']]);
 			foreach($items as $item) {
