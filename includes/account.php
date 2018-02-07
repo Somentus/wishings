@@ -48,20 +48,23 @@ function echoListsOwnedBy($pdo, $user_id) {
 // Display all lists contributed to by the user
 function echoListsContributedBy($pdo, $user_id) {
 	$contributedItems = query($pdo, "SELECT * FROM items WHERE patron_id = :patron_id", ['patron_id' => $user_id]);
-	$contributedListsRaw = [];
+	$contributedListIdsRaw = [];
 
 	echo "<h5>Lists that you contribute to:</h5>";
 
 	if(count($contributedItems) > 0) {
 		foreach($contributedItems as $contributedItem) {
 			$list_id = $contributedItem['list_id'];
-			$list = query($pdo, "SELECT * FROM lists WHERE id = :id", ['id' => $list_id])[0];
-			$contributedListsRaw[] = $list;
+			$contributedListIdsRaw[] = $list_id;
 		}
 
-		$contributedLists = array_unique($contributedListsRaw);
+		$contributedListIds = array_unique($contributedListIdsRaw);
 
-		foreach($contributedLists as $list) {
+		foreach($contributedListIds as $key=>$list_id) {
+			if($key != 0) {
+				echo "<hr/>";
+			}
+			$list = query($pdo, "SELECT * FROM lists WHERE id = :id", ['id' => $list_id])[0];
 			echo "<div class='col-md-12'>
 					<div class='row'>
 						<div clas='col-md-12'>
@@ -82,7 +85,7 @@ function echoListsContributedBy($pdo, $user_id) {
 				}
 				echo $item['name'];
 				echo "</div>
-				</div>";
+					</div>";
 			}
 			echo "</div>";
 		}
