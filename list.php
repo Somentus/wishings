@@ -7,6 +7,13 @@ $pdo = DB();
 require_once($_SERVER["DOCUMENT_ROOT"].'/includes/codes.php');
 require_once($_SERVER["DOCUMENT_ROOT"].'/includes/list.php');
 
+$errors = [];
+if(isset($_POST['login'])) {
+	$errors = login($pdo);
+} else if (isset($_POST['register'])) {
+	$errors = register($pdo);
+}
+
 ?>
 
 <!DOCTYPE HTML>
@@ -31,7 +38,7 @@ require_once($_SERVER["DOCUMENT_ROOT"].'/includes/list.php');
 
 	<br />
 	<div class="container">
-		<?php body($pdo); ?>
+		<?php portal($errors); body($pdo); ?>
 	</div>
 
 </body>
