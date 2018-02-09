@@ -78,12 +78,11 @@ function echoListsContributedBy($pdo, $user_id) {
 						<div clas='col-md-12'>";
 				if($user_id == $item['patron_id']) {
 					echo "<span class='oi oi-person mr-1'></span>";
-				} else if($item['patron_id'] != NULL) {
-					echo "<span class='oi oi-check mr-1'></span>";
-				} else {
-					echo "<span class='oi oi-x mr-1'></span>";
+					echo $item['name'];
+				} else if($item['patron_id'] == NULL) {
+					echo "<span class='oi oi-question-mark mr-1'></span>";
+					echo $item['name'];
 				}
-				echo $item['name'];
 				echo "</div>
 					</div>";
 			}

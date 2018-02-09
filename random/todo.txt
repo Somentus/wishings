@@ -1,6 +1,7 @@
 IN PROGRESS:
 
 SMALL:
+- If portal is closed, remove X button top right
 - includes/codes.php: Add admin navbar buttons
 - includes/codes.php: Write function to send emails
 - new: More information in emails (who is the user, what is the email about, what website is the email from)
@@ -30,6 +31,7 @@ IDEA:
 - Add/enable HTTPS (research how it works first xD )
 
 DONE:
+- Remove items that are no longer available from a list
 - account.php: Add links to displayed lists
 - Add Iconic library to the site
 - list.php: Display a list and its items
